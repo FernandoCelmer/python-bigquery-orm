@@ -1,3 +1,8 @@
+import typing
+
+from typing import Any
+
+from dataclasses import _MISSING_TYPE
 from bigquery_orm._internal import Defaul
 
 
@@ -33,13 +38,17 @@ class Pydantic:
 
     _type = {
         int: BigQueryType.INTEGER,
-        str: BigQueryType.STRING
+        str: BigQueryType.STRING,
+        typing.Optional[str]: BigQueryType.INTEGER,
+        typing.Optional[int]: BigQueryType.STRING,
     }
 
-    _mode = {
-        True: BigQueryMode.REQUIRED,
-        False: BigQueryMode.NULLABLE
-    }
+    @staticmethod
+    def _mode(value: Any):
+        return {
+            True: BigQueryMode.REQUIRED,
+            False: BigQueryMode.NULLABLE
+        }.get(value)
 
 
 class SQLAlchemy:
@@ -55,20 +64,25 @@ class SQLAlchemy:
         String: BigQueryType.STRING
     }
 
-    _mode = {
-        True: BigQueryMode.REQUIRED,
-        False: BigQueryMode.NULLABLE
-    }
-
+    @staticmethod
+    def _mode(value: Any):
+        return {
+            False: BigQueryMode.REQUIRED,
+            True: BigQueryMode.NULLABLE
+        }.get(value)
+ 
 
 class DataClass:
 
     _type = {
+        str: BigQueryType.STRING,
         int: BigQueryType.INTEGER,
-        str: BigQueryType.STRING
+        typing.Optional[str]: BigQueryType.STRING,
+        typing.Optional[int]: BigQueryType.STRING,
     }
 
-    _mode = {
-        True: BigQueryMode.REQUIRED,
-        False: BigQueryMode.NULLABLE
-    }
+    @staticmethod
+    def _mode(value: Any):
+        return {
+            _MISSING_TYPE: BigQueryMode.REQUIRED
+        }.get(value, BigQueryMode.NULLABLE)
