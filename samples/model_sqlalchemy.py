@@ -9,4 +9,4 @@ class UserSQLAlchemy(Base):
     __table_id__ = 'bigquery-orm.dataset.user'
 
     id = Column(Integer, primary_key=True, nullable=False)
-    email = Column(String, nullable=True)
+    email = Column(String, nullable=True, comment="Customer Contact")
