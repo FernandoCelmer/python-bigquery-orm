@@ -6,7 +6,7 @@
 
 ---
 
-- **Documentation**: [https://github.com/FernandoCelmer/python-bigquery-orm](https://github.com/FernandoCelmer/python-bigquery-orm)
+- **Documentation**: [https://fernandocelmer.github.io/python-bigquery-orm/](https://fernandocelmer.github.io/python-bigquery-orm/)
 - **Source Code**: [https://github.com/FernandoCelmer/python-bigquery-orm](https://github.com/FernandoCelmer/python-bigquery-orm)
 
 ---
