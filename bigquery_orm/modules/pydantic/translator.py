@@ -11,8 +11,8 @@ class TranslatorPydantic:
         objects = {
             int: Type.INTEGER,
             str: Type.STRING,
-            typing.Optional[str]: Type.INTEGER,
-            typing.Optional[int]: Type.STRING,
+            typing.Optional[int]: Type.INTEGER,
+            typing.Optional[str]: Type.STRING,
         }
         return objects.get(value)
 

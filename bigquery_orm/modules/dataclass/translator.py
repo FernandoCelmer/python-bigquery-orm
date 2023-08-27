@@ -11,10 +11,10 @@ class TranslatorDataClass:
     @staticmethod
     def _type(value: Any):
         objects = {
-            str: Type.STRING,
             int: Type.INTEGER,
+            str: Type.STRING,
+            typing.Optional[int]: Type.INTEGER,
             typing.Optional[str]: Type.STRING,
-            typing.Optional[int]: Type.STRING,
         }
         return objects.get(value)
 

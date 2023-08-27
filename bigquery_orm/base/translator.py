@@ -6,12 +6,12 @@ from bigquery_orm.base.bigquery import Type, Mode
 
 class BaseTranslator(ABC):
 
-    @abstractclassmethod
     @staticmethod
+    @abstractclassmethod
     def _type(value: Any) -> Type:
         pass
 
-    @abstractclassmethod
     @staticmethod
+    @abstractclassmethod
     def _mode(value: Any) -> Mode:
         pass
