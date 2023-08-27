@@ -12,19 +12,19 @@
 ---
 
 
-## [Installation](#)
+### [Installation](#)
 
 - **PIP** ``pip install bigquery-orm``
 
 - **Poetry** ``poetry add bigquery-orm``
 
-## [Uninstallation](#)
+### [Uninstallation](#)
 
 - **PIP** ``pip uninstall bigquery-orm``
 
 - **Poetry** ``poetry remove bigquery-orm``
 
-## Commit Style
+### Commit Style
 
 - ⚙️ FEATURE
 - 📝 PEP8
@@ -36,6 +36,6 @@
 - ⬆️ CI/CD
 - ⚠️ SECURITY
 
-## License
+### License
 
 This project is licensed under the terms of the MIT license.

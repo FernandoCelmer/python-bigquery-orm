@@ -4,7 +4,8 @@ repo_url: https://github.com/FernandoCelmer/python-bigquery-orm
 site_url: https://fernandocelmer.github.io/python-bigquery-orm/
 
 nav:
-    - Home: index.md
+    - Python BigQuery ORM: index.md
 
 theme:
     name: simple-blog
+    logo: assets/google_bigquery.png
