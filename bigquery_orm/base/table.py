@@ -23,7 +23,7 @@ class Table:
 
             else:
                 raise ExceptionInvalidModel()
-            
+
         except ExceptionInvalidModel as error:
             logging.error(error)
 
