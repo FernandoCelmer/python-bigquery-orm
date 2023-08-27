@@ -1,0 +1,10 @@
+site_name: Python BigQuery ORM
+repo_name: FernandoCelmer/python-bigquery-orm
+repo_url: https://github.com/FernandoCelmer/python-bigquery-orm
+site_url: https://fernandocelmer.github.io/python-bigquery-orm/
+
+nav:
+    - Home: index.md
+
+theme:
+    name: simple-blog
