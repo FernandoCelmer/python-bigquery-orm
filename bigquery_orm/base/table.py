@@ -1,5 +1,6 @@
 import logging
 
+from typing import Optional
 from google.cloud.bigquery import Client
 
 from bigquery_orm.exception import ExceptionInvalidModel
@@ -26,7 +27,7 @@ class Table:
         except ExceptionInvalidModel as error:
             logging.error(error)
 
-    def create(self):
+    def create(self, table_id: Optional[str] = None):
         pass
 
     def delete(self):
