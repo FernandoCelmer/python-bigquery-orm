@@ -33,7 +33,7 @@ def mock_base_table_mapping():
     return [
         {
             'name': 'id',
-            'type':'INTEGER',
+            'type': 'INTEGER',
             'mode': 'REQUIRED',
             'description': 'id',
             'max_length': None
