@@ -6,3 +6,5 @@ coverage==7.3.0
 mkdocs==1.5.2
 mkdocs-material==9.2.4
 mkdocs-material-extensions==1.1.1
+pydantic==2.2.1
+SQLAlchemy==2.0.20
