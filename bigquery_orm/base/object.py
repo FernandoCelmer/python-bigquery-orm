@@ -1,7 +1,4 @@
-from bigquery_orm.base.manager import BaseManager
-
-
-class QueryFilter(BaseManager):
+class QueryFilter:
 
     def all(self):
         pass
@@ -13,25 +10,25 @@ class QueryFilter(BaseManager):
         pass
 
 
-class Query(BaseManager):
+class Query:
 
     def filter(self):
         pass
 
 
-class Delete(BaseManager):
+class Delete:
     ...
 
 
-class Insert(BaseManager):
+class Insert:
     ...
 
 
-class Update(BaseManager):
+class Update:
     ...
 
 
-class Object(BaseManager):
+class Object:
 
     def query(self, *args, **kwargs):
         return Query(

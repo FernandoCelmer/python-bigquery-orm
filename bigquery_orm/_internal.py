@@ -3,8 +3,20 @@ class Defaul:
 
 
 try:
-    from pydantic import BaseModel
-    from sqlalchemy.orm.decl_api import DeclarativeMeta
+    from pydantic import BaseModel as PydanticBaseModel
 except Exception:
-    BaseModel = Defaul
-    DeclarativeMeta = Defaul
+    PydanticBaseModel = Defaul
+
+
+try:
+    from sqlalchemy.orm.decl_api import (
+        DeclarativeMeta as SQLAlchemyDeclarativeMeta
+    )
+    from sqlalchemy import (
+        Integer as SQLAlchemyInteger,
+        String as SQLAlchemyString
+    )
+except Exception:
+    SQLAlchemyDeclarativeMeta = Defaul
+    SQLAlchemyInteger = Defaul
+    SQLAlchemyString = Defaul
