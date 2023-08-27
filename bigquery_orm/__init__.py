@@ -27,11 +27,9 @@ from bigquery_orm import version as bigquery_orm_version
 __version__ = bigquery_orm_version.__version__
 
 from bigquery_orm.base.table import Table
-from bigquery_orm.base.object import Object
 
 
 __all__ = [
     "__version__",
-    "Table",
-    "Object"
+    "Table"
 ]

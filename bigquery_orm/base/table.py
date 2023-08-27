@@ -1,12 +1,15 @@
 import logging
 
+from google.cloud.bigquery import Client
+
 from bigquery_orm.exception import ExceptionInvalidModel
 from bigquery_orm.modules import DataClass, Pydantic, SQLAlchemy
 
 
 class Table:
 
-    def __init__(self, model_class: object):
+    def __init__(self, model_class: object, client: Client):
+        self.client = client
         try:
             if hasattr(model_class, "__dataclass_fields__"):
                 self.handler = DataClass(model_class=model_class)
