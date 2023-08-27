@@ -31,11 +31,7 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
     ],
-    packages=[
-        'bigquery_orm',
-    ],
     include_package_data=True,
     python_requires=">=3.6",
-    zip_safe=True,
-    fullname='bigquery-orm',
+    zip_safe=True
 )
