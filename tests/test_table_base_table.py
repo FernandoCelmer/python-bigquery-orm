@@ -6,7 +6,7 @@ from tests.conftest import (
 
 from samples import UserDataClass, UserPydantic, UserSQLAlchemy
 from bigquery_orm.base.table import BaseTable
-from bigquery_orm.exception import ExceptionInvalidDataClass
+from bigquery_orm.exception import ExceptionInvalidModel
 
 
 def test_base_table_set_sqlalchemy_success(keys, mapping):
@@ -52,4 +52,4 @@ def test_base_table_setup_sqlalchemy_with_error(caplog):
     table = BaseTable(model_class=object)
     table.__setup__()
 
-    assert isinstance(caplog.records[0].msg, ExceptionInvalidDataClass)
+    assert isinstance(caplog.records[0].msg, ExceptionInvalidModel)
