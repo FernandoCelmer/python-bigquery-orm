@@ -1,7 +1,7 @@
 import pytest
 
 from tests.conftest import mock_base_field_input, mock_base_field_output
-from bigquery_orm.base.table import BaseField
+from bigquery_orm.base.field import BaseField
 
 
 def test_base_field_instance_with_success(mock_base_field_input, mock_base_field_output):
