@@ -1,3 +1,5 @@
+__version__ = "0.0.2"
+
 __author__ = 'Fernando Celmer <email@fernandocelmer.com>'
 __copyright__ = """MIT License
 
@@ -22,14 +24,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE."""
 
 
-from bigquery_orm import version as bigquery_orm_version
-
-__version__ = bigquery_orm_version.__version__
-
 from bigquery_orm.base.table import Table
 
 
 __all__ = [
-    "__version__",
     "Table"
 ]
