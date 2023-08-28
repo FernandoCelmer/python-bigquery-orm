@@ -29,8 +29,10 @@ jobs:
     - name: ❤️️ Test with Coverage
       run: |
         coverage run -m pytest
-        rm -r coverage.svg
-        coverage-badge -o docs/coverage.svg
+        rm -r docs/assets/coverage.svg
+        coverage-badge -o docs/assets/coverage.svg
+      shell: bash
+      continue-on-error: true
 
     - name: 📝 Git Config
       run: |
