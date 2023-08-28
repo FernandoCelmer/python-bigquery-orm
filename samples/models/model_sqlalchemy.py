@@ -1,5 +1,9 @@
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.orm import declarative_base
+from bigquery_orm._internal import (
+    SQLAlchemyColumn as Column,
+    SQLAlchemyInteger as Integer,
+    SQLAlchemyString as String
+)
+from bigquery_orm._internal import SQLAlchemyDeclarativeBase as declarative_base
 
 Base = declarative_base()
 

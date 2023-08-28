@@ -1,4 +1,7 @@
-from pydantic import BaseModel, Field
+from bigquery_orm._internal import (
+    PydanticBaseModel as BaseModel,
+    PydanticField as Field
+)
 
 
 class UserPydantic(BaseModel):

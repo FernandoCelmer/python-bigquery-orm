@@ -1,22 +1,32 @@
-class Defaul:
-    ...
+class Default:
+    
+    def __init__(self, *args, **kwargs) -> None:
+        pass
 
 
 try:
-    from pydantic import BaseModel as PydanticBaseModel
+    from pydantic import (
+        BaseModel as PydanticBaseModel,
+        Field as PydanticField
+    )
 except Exception:
-    PydanticBaseModel = Defaul
+    PydanticBaseModel = Default
+    PydanticField = Default
 
 
 try:
     from sqlalchemy.orm.decl_api import (
-        DeclarativeMeta as SQLAlchemyDeclarativeMeta
+        DeclarativeMeta as SQLAlchemyDeclarativeMeta,
+        declarative_base as SQLAlchemyDeclarativeBase
     )
     from sqlalchemy import (
+        Column as SQLAlchemyColumn,
         Integer as SQLAlchemyInteger,
         String as SQLAlchemyString
     )
 except Exception:
-    SQLAlchemyDeclarativeMeta = Defaul
-    SQLAlchemyInteger = Defaul
-    SQLAlchemyString = Defaul
+    SQLAlchemyDeclarativeMeta = Default
+    SQLAlchemyDeclarativeBase = Default
+    SQLAlchemyColumn = Default
+    SQLAlchemyInteger = Default
+    SQLAlchemyString = Default

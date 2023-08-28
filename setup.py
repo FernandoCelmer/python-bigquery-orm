@@ -24,8 +24,6 @@ setup(
         "License :: OSI Approved :: MIT License",
         'Intended Audience :: Developers',
         'Natural Language :: English',
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
@@ -34,10 +32,10 @@ setup(
     packages=['bigquery_orm'],
     include_package_data=True,
     install_requires=[
-        'google-auth==2.22.0',
-        'google-cloud-bigquery==3.11.4'
+        'google-auth',
+        'google-cloud-bigquery'
     ],
-    python_requires=">=3.6",
+    python_requires=">=3.8",
     zip_safe=True,
     fullname='bigquery-orm',
 )
