@@ -1,0 +1,31 @@
+name: 📦 Package Code Quality
+
+on:
+  pull_request:
+    branches: [ "develop" ]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: develop
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: ⚙️ Set up Python 3.11
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.11"
+
+    - name: ⚙️ Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements-dev.txt --no-cache-dir
+  
+    - name: 📝️ Code Scan
+      run: |
+        flake8 bigquery_orm/ --count --show-source --statistics --ignore=E501
+        flake8 tests/ --count --show-source --statistics --ignore=E501,E712,F811,F401

@@ -1,0 +1,50 @@
+name: 📦 Package Coverage
+
+on:
+  pull_request:
+    branches: [ "develop" ]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: develop
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: ⚙️ Set up Python 3.11
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.11"
+
+    - name: ⚙️ Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements-dev.txt --no-cache-dir
+
+    - name: ❤️️ Test with Coverage
+      run: |
+        coverage run -m pytest
+        rm -r coverage.svg
+        coverage-badge -o docs/coverage.svg
+
+    - name: 📝 Git Config
+      run: |
+        git config --global user.email ${{secrets.EMAIL}}
+        git config --global user.name ${{secrets.USERNAME}}
+      shell: bash
+
+    - name: 📝 Git Process
+      run: |
+        if [[ `git status --porcelain` ]]; then
+          git add --all
+          git commit -a -m "📘 DOCS - Update Badge"
+          git push origin HEAD:develop --force
+        else
+          echo "WARNING: No changes were detected. git commit push action aborted."
+        fi
+      shell: bash
+      continue-on-error: true
