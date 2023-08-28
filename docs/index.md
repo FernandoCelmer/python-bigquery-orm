@@ -11,18 +11,55 @@
 
 ---
 
-
 ### [Installation](#)
 
-- **PIP** ``pip install bigquery-orm``
+=== "PIP"
 
-- **Poetry** ``poetry add bigquery-orm``
+    ```bash
+    pip install bigquery-orm
+    ```
+
+=== "Poetry"
+
+    ```bash
+    poetry add bigquery-orm
+    ```
 
 ### [Uninstallation](#)
 
-- **PIP** ``pip uninstall bigquery-orm``
+=== "PIP"
 
-- **Poetry** ``poetry remove bigquery-orm``
+    ```bash
+    pip uninstall bigquery-orm
+    ```
+
+=== "Poetry"
+
+    ```bash
+    poetry remove bigquery-orm
+    ```
+
+## [Types](#)
+
+| Types          | SQLAlchemy    | Pydantic      | DataClass     |
+|:-------------- |:-------------:|:-------------:|:-------------:| 
+| ``STRING``     |               |               |               |
+| ``INTEGER``    |               |               |               |
+| ``BYTES``      |               |               |               |
+| ``INT64``      |               |               |               |
+| ``FLOAT``      |               |               |               |
+| ``FLOAT64``    |               |               |               |
+| ``DECIMAL``    |               |               |               |
+| ``BIGDECIMAL`` |               |               |               |
+| ``BOOLEAN``    |               |               |               |
+| ``BOOL``       |               |               |               |
+| ``GEOGRAPHY``  |               |               |               |
+| ``RECORD``     |               |               |               |
+| ``STRUCT``     |               |               |               |
+| ``TIMESTAMP``  |               |               |               |
+| ``DATE``       |               |               |               |
+| ``TIME``       |               |               |               |
+| ``DATETIME``   |               |               |               |
 
 ### Commit Style
 
