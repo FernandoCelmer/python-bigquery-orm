@@ -19,7 +19,7 @@ class Type:
     BOOL = "BOOLEAN"
     GEOGRAPHY = "GEOGRAPHY"
     RECORD = "RECORD"
-    STRUCT = "RECORD"
+    STRUCT = "STRUCT"
     TIMESTAMP = "TIMESTAMP"
     DATE = "DATE"
     TIME = "TIME"
