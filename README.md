@@ -1,5 +1,3 @@
-# python-bigquery-orm
-
 ![GitHub last commit](https://img.shields.io/github/last-commit/FernandoCelmer/python-bigquery-orm?style=flat-square)
 ![PyPI](https://img.shields.io/pypi/v/bigquery-orm?style=flat-square)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/bigquery-orm?style=flat-square)
@@ -13,28 +11,57 @@
 
 ---
 
+### [Installation](#)
 
-## [Installation](#)
+=== "PIP"
 
-- **PIP**
+    ```bash
+    pip install bigquery-orm
+    ```
 
-      pip install bigquery-orm
+=== "Poetry"
 
-- **Poetry**
+    ```bash
+    poetry add bigquery-orm
+    ```
 
-      poetry add bigquery-orm
+### [Uninstallation](#)
 
-## [Uninstallation](#)
+=== "PIP"
 
-- **PIP**
+    ```bash
+    pip uninstall bigquery-orm
+    ```
 
-      pip uninstall bigquery-orm
+=== "Poetry"
 
-- **Poetry**
+    ```bash
+    poetry remove bigquery-orm
+    ```
 
-      poetry remove bigquery-orm
+## [Types](#)
 
-## Commit Style
+| Types          | SQLAlchemy    | Pydantic      | DataClass     |
+|:-------------- |:-------------:|:-------------:|:-------------:| 
+| ``STRING``     |               |               |               |
+| ``INTEGER``    |               |               |               |
+| ``BYTES``      |               |               |               |
+| ``INT64``      |               |               |               |
+| ``FLOAT``      |               |               |               |
+| ``FLOAT64``    |               |               |               |
+| ``DECIMAL``    |               |               |               |
+| ``BIGDECIMAL`` |               |               |               |
+| ``BOOLEAN``    |               |               |               |
+| ``BOOL``       |               |               |               |
+| ``GEOGRAPHY``  |               |               |               |
+| ``RECORD``     |               |               |               |
+| ``STRUCT``     |               |               |               |
+| ``TIMESTAMP``  |               |               |               |
+| ``DATE``       |               |               |               |
+| ``TIME``       |               |               |               |
+| ``DATETIME``   |               |               |               |
+
+### Commit Style
 
 - ⚙️ FEATURE
 - 📝 PEP8
@@ -46,6 +73,6 @@
 - ⬆️ CI/CD
 - ⚠️ SECURITY
 
-## License
+### License
 
 This project is licensed under the terms of the MIT license.

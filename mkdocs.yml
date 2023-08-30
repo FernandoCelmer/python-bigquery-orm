@@ -5,28 +5,34 @@ site_url: https://fernandocelmer.github.io/python-bigquery-orm/
 copyright: Fernando Celmer
 
 nav:
-  - Home: index.md
-  - Release Notes: nav/release-notes.md
+  - Home:
+    - Overview: nav/home/index.md
+    - Changelog: nav/home/changelog.md
+    - Licence: nav/home/license.md
+  - API reference:
+    - API reference: nav/reference/index.md
+  - Development:
+    - Coverage report: coverage.md
 
 theme:
   name: material
   logo: assets/google_bigquery.png
   favicon: assets/google_bigquery.png
+  features:
+  - navigation.footer
+  - navigation.tabs
 
 markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.highlight
-  - codehilite
   - pymdownx.tabbed:
       alternate_style: true 
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
+  - pymdownx.snippets:
+      check_paths: true
 
 extra_css:
   - stylesheets/extra.css
+
+plugins:
+- coverage
 
 extra:
   social:
