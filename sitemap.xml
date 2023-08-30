@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://fernandocelmer.github.io/python-bigquery-orm/</loc>
-         <lastmod>2023-08-28</lastmod>
+         <loc>https://fernandocelmer.github.io/python-bigquery-orm/nav/development/coverage/</loc>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://fernandocelmer.github.io/python-bigquery-orm/nav/release-notes/</loc>
-         <lastmod>2023-08-28</lastmod>
+         <loc>https://fernandocelmer.github.io/python-bigquery-orm/nav/home/</loc>
+         <lastmod>2023-08-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://fernandocelmer.github.io/python-bigquery-orm/nav/home/changelog/</loc>
+         <lastmod>2023-08-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://fernandocelmer.github.io/python-bigquery-orm/nav/home/license/</loc>
+         <lastmod>2023-08-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://fernandocelmer.github.io/python-bigquery-orm/nav/reference/</loc>
+         <lastmod>2023-08-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://fernandocelmer.github.io/python-bigquery-orm/coverage/</loc>
+         <lastmod>2023-08-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
