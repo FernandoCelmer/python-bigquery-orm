@@ -43,8 +43,8 @@
 
 | Types          | SQLAlchemy    | Pydantic      | DataClass     |
 |:-------------- |:-------------:|:-------------:|:-------------:| 
-| ``STRING``     |               |               |               |
-| ``INTEGER``    |               |               |               |
+| ``STRING``     |       ✅       |       ✅      |       ✅       |
+| ``INTEGER``    |       ✅       |       ✅      |       ✅       |
 | ``BYTES``      |               |               |               |
 | ``INT64``      |               |               |               |
 | ``FLOAT``      |               |               |               |

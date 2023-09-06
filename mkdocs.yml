@@ -9,6 +9,17 @@ nav:
     - Overview: nav/home/index.md
     - Changelog: nav/home/changelog.md
     - Licence: nav/home/license.md
+  - Samples:
+    - Client BigQuery: nav/samples/client-bigquery.md
+    - Dataclass:
+      - Model: nav/samples/model-dataclass.md
+      - BigQuery Table: nav/samples/bigquery-table-dataclass.md
+    - Pydantic:
+      - Model: nav/samples/model-pydantic.md
+      - BigQuery Table: nav/samples/bigquery-table-pydantic.md
+    - SQLAlchemy:
+      - Model: nav/samples/model-sqlalchemy.md
+      - BigQuery Table: nav/samples/bigquery-table-sqlalchemy.md
   - API reference:
     - API reference: nav/reference/index.md
   - Development:
@@ -27,6 +38,7 @@ markdown_extensions:
       alternate_style: true 
   - pymdownx.snippets:
       check_paths: true
+  - pymdownx.superfences:
 
 extra_css:
   - stylesheets/extra.css
