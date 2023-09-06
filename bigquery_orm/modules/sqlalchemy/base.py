@@ -5,21 +5,21 @@ from bigquery_orm.modules.sqlalchemy.translator import TranslatorSQLAlchemy as T
 
 class SQLAlchemy(BaseManager):
 
-    def load_keys(self):
+    def _load_keys(self):
         return self.model_class.__table__.columns.keys()
 
-    def load_map(self):
+    def _load_map(self):
         mapping = []
         for field in self.model_class.__table__.columns:
             mapping.append(
-                self.translator(
+                self._translator(
                     field=field.name,
                     detail=field
                 )
             )
         return mapping
 
-    def translator(self, field: str, detail: object) -> BaseField:
+    def _translator(self, field: str, detail: object) -> BaseField:
         description = getattr(self.model_class, field).comment or detail.description
 
         schema = BaseField(

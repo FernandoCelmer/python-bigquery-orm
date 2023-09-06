@@ -5,21 +5,21 @@ from bigquery_orm.modules.pydantic.translator import TranslatorPydantic as TR
 
 class Pydantic(BaseManager):
 
-    def load_keys(self):
+    def _load_keys(self):
         return [item[0] for item in self.model_class.model_fields.items()]
 
-    def load_map(self):
+    def _load_map(self):
         mapping = []
         for field in self.model_class.model_fields:
             mapping.append(
-                self.translator(
+                self._translator(
                     field=field,
                     detail=self.model_class.model_fields[field]
                 )
             )
         return mapping
 
-    def translator(self, field: str, detail: object) -> BaseField:
+    def _translator(self, field: str, detail: object) -> BaseField:
         description = detail.description or field
 
         schema = BaseField(
